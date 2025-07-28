@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetYourTrip - Book Your Perfect Journey</title>
+    <link rel="stylesheet" href="../assets/css/common/base.css">
+    <link rel="stylesheet" href="../assets/css/common/layout.css">
+    <link rel="stylesheet" href="../assets/css/pages/landing.css">
+
+
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="" class="logo">GetYourTrip</a>
+            <ul class="nav-links">
+                <!-- <li><a href="#flights">Flights</a></li>
+                <li><a href="#hotels">Hotels</a></li>
+                <li><a href="#villas">Villas</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="MyTrips.html">My Trips</a></li>
+            </ul>
+            <a href="login.html">
+            <button class="Login-Register" >Login or Create Account</button>
+            </a>
+        </nav>
+    </header>
+    <section class="hero">  
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Dream Journey Awaits</h1>
+                <p class="hero-subtitle">Discover amazing flights, luxury hotels, and stunning villas worldwide</p>
+                
+                <div class="booking-widget">
+                    <div class="booking-tabs">
+                        <button class="tab-btn active" onclick="switchTab('flights', event)">Flights</button>
+                        <button class="tab-btn" onclick="switchTab('hotels', event)">Hotels</button>
+                        <button class="tab-btn" onclick="switchTab('villas', event)">Villas</button>
+                    </div>
+                    
+                    <div class="booking-form" id="booking-form">
+                        <div class="form-group">
+                            <label for="from">From</label>
+                            <input type="text" id="from" value="Delhi" placeholder="Departure City">
+                        </div>
+                        <div class="form-group">
+                            <label for="to">To</label>
+                            <input type="text" id="to" value="Mumbai" placeholder="Destination">
+                        </div>
+                        <div class="form-group">
+                            <label for="departure">Departure</label>
+                            <input type="date" id="departure">
+                        </div>
+                        <div class="form-group">
+                            <label for="return">Return</label>
+                            <input type="date" id="return">
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers">Passengers</label>
+                            <select id="passengers">
+                                <option>1 Adult</option>
+                                <option>2 Adults</option>
+                                <option>3 Adults</option>
+                                <option>4+ Adults</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="class">Class</label>
+                            <select id="class">
+                                <option>Economy</option>
+                                <option>Business</option>
+                                <option>First Class</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="search-btn" onclick="searchBookings()">Search Best Deals</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose GetYourTrip?</h2>
+            <p class="section-subtitle">Experience the difference with our premium travel booking platform</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Best Price Guarantee</h3>
+                    <p class="feature-description">We compare millions of flights, hotels, and villas to find you the absolute best deals available.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Global Coverage</h3>
+                    <p class="feature-description">Access to over 500 airlines, 1.5 million hotels, and thousands of luxury villas worldwide.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Secure Booking</h3>
+                    <p class="feature-description">Your data is protected with bank-level security and we're available 24/7 for support.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Explore?</h2>
+            <p class="cta-description">Join millions of travelers who trust GetYourTrip for their perfect getaway</p>
+            <button class="cta-btn" onclick="scrollToBooking()">Start Your Journey</button>
+        </div>
+    </section> 
+    
+    <script src="../assets/js/common/utils.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

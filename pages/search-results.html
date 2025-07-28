@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetYourTrip - Search Results</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../assets/css/common/base.css">
+    <link rel="stylesheet" href="../assets/css/common/layout.css">
+    <link rel="stylesheet" href="../assets/css/pages/search-results.css">
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="../pages/Landing.html" class="logo">GetYourTrip</a>
+            <ul class="nav-links">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">My Trips</a></li>
+            </ul>
+            <a href="#" class="back-btn" onclick="goBack()">← Back to Search</a>
+        </nav>
+    </header>
+    <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    <main class="main-content">
+        
+        <div class="search-summary">
+            <div class="search-info">
+                <div class="search-details">
+                    <h2 id="search-title">Flight Search Results</h2>
+                    <div class="search-params" id="search-params">
+                        <div class="param">
+                            <i class='bx bx-map'></i>
+                            <span id="route">NYC → LAX</span>
+                        </div>
+                        <div class="param">
+                            <i class='bx bx-calendar'></i>
+                            <span id="dates">Jul 27 - Jul 30</span>
+                        </div>
+                        <div class="param">
+                            <i class='bx bx-user'></i>
+                            <span id="passengers">2 Adults</span>
+                        </div>
+                        <div class="param">
+                            <i class='bx bx-crown'></i>
+                            <span id="class">Economy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-count" id="results-count">
+                    Found 24 results
+                </div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>Sort by</label>
+                    <select onchange="sortResults(this.value)">
+                        <option value="price">Best Price</option>
+                        <option value="duration">Shortest Duration</option>
+                        <option value="departure">Departure Time</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Price Range</label>
+                    <select onchange="filterByPrice(this.value)">
+                        <option value="all">All Prices</option>
+                        <option value="0-200">$0 - $200</option>
+                        <option value="200-500">$200 - $500</option>
+                        <option value="500+">$500+</option>
+                    </select>
+                </div>
+                <div class="filter-group" id="additional-filter">
+                    <label>Airlines</label>
+                    <select>
+                        <option>All Airlines</option>
+                        <option>American Airlines</option>
+                        <option>Delta</option>
+                        <option>United</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-container" id="results-container">
+            <!-- Results will be loaded here -->
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn">‹</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">›</button>
+        </div>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/common/utils.js"></script>
+    <script src="../assets/js/pages/search-results.js"></script>
+</body>
+</html>
